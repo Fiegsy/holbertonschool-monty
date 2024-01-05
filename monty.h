@@ -1,7 +1,10 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef _MONTY_H_
+#define _MONTY_H_
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <ctype.h>
 #include <unistd.h>
 #include <string.h>
 
@@ -14,12 +17,29 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-typedef struct stack_s
+typedef struct stack_t
 {
 	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
+	struct stack_t *prev;
+	struct stack_t *next;
 } stack_t;
+
+/**
+ * struct monty_s - variables -args, file, line content
+ * @arg: value
+ * @file: pointer to monty file
+ * @content: line content
+ * @lifi: change stack
+ * Description: monty program
+ */
+typedef struct monty_t
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
+}  monty_t;
+extern monty_t monty;
 
 /**
  * struct instruction_s - opcode and its function
@@ -39,5 +59,8 @@ void addnewnode(stack_t **head, int data);
 stack_t *addtotail(stack_t **tail, int data);
 void freeStack(stack_t **head);
 void pint(stack_t **stack, unsigned int line_number);
+void exec(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void push(stack_t **head, unsigned int count);
+void pall(stack_t **head, unsigned int count);
 
 #endif
