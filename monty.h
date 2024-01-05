@@ -38,5 +38,6 @@ typedef struct instruction_s
 void addnewnode(stack_t **head, int data);
 stack_t *addtotail(stack_t **tail, int data);
 void freeStack(stack_t **head);
+void pint(stack_t **stack, unsigned int line_number);
 
 #endif
