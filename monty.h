@@ -58,9 +58,9 @@ typedef struct instruction_s
 void addnewnode(stack_t **head, int data);
 stack_t *addtotail(stack_t **tail, int data);
 void freeStack(stack_t **head);
+void pint(stack_t **stack, unsigned int line_number);
 void exec(char *content, stack_t **stack, unsigned int counter, FILE *file);
-void pall(stack_t **head, unsigned int count);
 void push(stack_t **head, unsigned int count);
-
+void pall(stack_t **head, unsigned int count);
 
 #endif
