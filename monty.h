@@ -62,5 +62,7 @@ void pint(stack_t **stack, unsigned int line_number);
 void exec(char *content, stack_t **stack, unsigned int counter, FILE *file);
 void push(stack_t **head, unsigned int count);
 void pall(stack_t **head, unsigned int count);
+void pint(stack_t **stack, unsigned int line_number);
+
 
 #endif
