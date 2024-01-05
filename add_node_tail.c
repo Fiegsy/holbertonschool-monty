@@ -27,5 +27,5 @@ stack_t *addtotail(stack_t **tail, int data)
 
 	*tail = new_node;
 
-	return (new_node)
+	return (new_node);
 }
