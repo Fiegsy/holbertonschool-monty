@@ -16,7 +16,7 @@ void exec(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		{"pint", pint},
 		{"swap", swap},
 		{"pop", pop},
-
+		{"nop", nop}
 
 		{NULL, NULL}
 	};
