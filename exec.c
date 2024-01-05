@@ -15,6 +15,7 @@ void exec(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		{"pall", pall},
 		{"pint", pint},
 		{"swap", swap},
+		{"pop", pop},
 
 
 		{NULL, NULL}
