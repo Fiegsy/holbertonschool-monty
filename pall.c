@@ -2,7 +2,7 @@
 /**
  * pall - prints the stack
  * @head: head
- * @counter: not used
+ * @count: not used
  * Return: return
 */
 void pall(stack_t **head, unsigned int count)
